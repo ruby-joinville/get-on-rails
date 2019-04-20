@@ -1,15 +1,134 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Getonrails</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>GetOnRailsApp</title>
+
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= favicon_link_tag asset_path('') %>
   </head>
 
-  <body>
-    <%= yield %>
+  <body id="page-top" class="<%= current_user ? '' : 'bg-dark' %>">
+    <% if current_user %>
+
+      <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
+        <%= image_tag('', size: '18', class: 'custom-logo-position') %>
+        <a class="navbar-brand mr-1" href="#">GetOnRailsApp</a>
+        <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="ml-auto mr-0 mr-md-3 my-2 my-md-0">
+        </div>
+        <span style="color: white;"><%= current_user.email %></span>
+        <ul class="navbar-nav ml-auto ml-md-0">
+          <li class="nav-item dropdown no-arrow">
+            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="fas fa-user-circle fa-fw"></i>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+              <a class="dropdown-item" href="#">Configurações</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">Logout</a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+
+      <div id="wrapper">
+        <ul class="sidebar navbar-nav toggled">
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <i class="fas fa-fw fa-home"></i>
+              <span>Home</span>
+            </a>
+          </li>
+        </ul>
+        <div id="content-wrapper">
+          <div class="container-fluid">
+
+            <%= yield %>
+
+          </div>
+        </div>
+      </div>
+
+      <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+      </a>
+
+      <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Vai embora?</h5>
+              <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">×</span>
+              </button>
+            </div>
+            <div class="modal-body">Você realmente deseja sair?</div>
+            <div class="modal-footer">
+              <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
+              <a class="btn btn-primary" href="<%= destroy_user_session_path %>" data-method="delete">Logout</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% else %>
+
+      <%= yield %>
+
+    <% end %>
   </body>
 </html>
+
+<script type="text/javascript">
+  (function($) {
+    "use strict"; // Start of use strict
+
+    // Toggle the side navigation
+    $("#sidebarToggle").on('click',function(e) {
+      e.preventDefault();
+      $("body").toggleClass("sidebar-toggled");
+      $(".sidebar").toggleClass("toggled");
+    });
+
+    // Prevent the content wrapper from scrolling when the fixed side navigation hovered over
+    $('body.fixed-nav .sidebar').on('mousewheel DOMMouseScroll wheel', function(e) {
+      if ($(window).width() > 768) {
+        var e0 = e.originalEvent,
+          delta = e0.wheelDelta || -e0.detail;
+        this.scrollTop += (delta < 0 ? 1 : -1) * 30;
+        e.preventDefault();
+      }
+    });
+
+    // Scroll to top button appear
+    $(document).on('scroll',function() {
+      var scrollDistance = $(this).scrollTop();
+      if (scrollDistance > 100) {
+        $('.scroll-to-top').fadeIn();
+      } else {
+        $('.scroll-to-top').fadeOut();
+      }
+    });
+
+    // Smooth scrolling using jQuery easing
+    $(document).on('click', 'a.scroll-to-top', function(event) {
+      var $anchor = $(this);
+      $('html, body').stop().animate({
+        scrollTop: ($($anchor.attr('href')).offset().top)
+      }, 1000, 'easeInOutExpo');
+      event.preventDefault();
+    });
+
+  })(jQuery); // End of use strict
+</script>
