@@ -1,24 +1,13 @@
-# README
+# GetOnRails
+This is a template Rails app designed for learning purposes. This template includes the basic to get a Rails student started with a functioning system with postgres, devise and a [basic bootstrap theme](https://startbootstrap.com/templates/sb-admin/).
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Preconditions
+ - ruby version `2.5.3`
+ - rails version `5.2.3`
+ - Local installation of Postgres with a `postgres:postgres` user:password
 
-Things you may want to cover:
+### Setup
 
-* Ruby version
+`bundle install`
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+`rails db:setup`
