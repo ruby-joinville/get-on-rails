@@ -1,26 +1,41 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Records</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th colspan="4"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @records.each do |record| %>
-      <tr>
-        <td><%= record.name %></td>
-        <td><%= link_to 'Show', record %></td>
-        <td><%= link_to 'Edit', edit_record_path(record) %></td>
-        <td><%= link_to 'Destroy', record, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<div class="card mb-3">
+  <div class="card-header">
+    <i class="fas fa-compact-disc"></i>
+    Records
+  </div>
+  <div class="card-body">
+    <div class="table-responsive">
+      <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @records.each do |record| %>
+            <tr>
+              <td><%= link_to record.name, record %></td>
+              <td class="text-center">
+                <%= link_to edit_record_path(record) do %>
+                  <i class="fas fa-pencil-alt"></i>
+                <% end %>
+                <%= link_to record, method: :delete, data: { confirm: 'Are you sure?' } do %>
+                  <i class="fas fa-times"></i>
+                <% end %>
+              </td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
 
 <br>
 
-<%= link_to 'New Record', new_record_path %>
+<%= button_to "New Record", new_record_path, :method => "get", class: "btn btn-primary btn-lg btn-block login-button" %>
+
+
