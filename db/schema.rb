@@ -10,10 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_20_181834) do
+ActiveRecord::Schema.define(version: 2019_05_04_131245) do
 
   # These are extensions that must be enabled in order to support this database
+  enable_extension "citext"
   enable_extension "plpgsql"
+  enable_extension "uuid-ossp"
+
+  create_table "records", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.float "value"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "schema_info", id: false, force: :cascade do |t|
+    t.integer "version", default: 0, null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
