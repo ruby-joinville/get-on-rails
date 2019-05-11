@@ -13,9 +13,7 @@
 ActiveRecord::Schema.define(version: 2019_05_04_135710) do
 
   # These are extensions that must be enabled in order to support this database
-  enable_extension "citext"
   enable_extension "plpgsql"
-  enable_extension "uuid-ossp"
 
   create_table "records", force: :cascade do |t|
     t.string "name"

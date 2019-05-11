@@ -1,12 +1,12 @@
 class RecordsController < ApplicationController
-  before_action :authenticate_user!
+  before_action :record, only: [:show, :edit, :update, :destroy]
 
   def index
-    @records = current_user.records.all
+    @records = current_user.records
   end
 
   def show
-    render :show, locals: { record: record }
+    render :show
   end
 
   def new
@@ -14,7 +14,7 @@ class RecordsController < ApplicationController
   end
 
   def edit
-    render :edit, locals: { record: record }
+    render :edit
   end
 
   def create
@@ -45,7 +45,7 @@ class RecordsController < ApplicationController
   private
 
   def record
-    @record = Record.find(params[:id])
+    @record ||= Record.find(params[:id])
   end
 
   def record_params

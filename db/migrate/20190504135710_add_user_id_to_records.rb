@@ -1,5 +1,5 @@
 class AddUserIdToRecords < ActiveRecord::Migration[5.2]
-  def change
-    add_column :records, :user_id, :integer
+  change_table :records do |t|
+    t.belongs_to :user, index: true, null: false
   end
 end

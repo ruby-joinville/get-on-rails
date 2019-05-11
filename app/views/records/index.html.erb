@@ -15,19 +15,7 @@
           </tr>
         </thead>
         <tbody>
-          <% @records.each do |record| %>
-            <tr>
-              <td><%= link_to record.name, record %></td>
-              <td class="text-center">
-                <%= link_to edit_record_path(record) do %>
-                  <i class="fas fa-pencil-alt"></i>
-                <% end %>
-                <%= link_to record, method: :delete, data: { confirm: 'Are you sure?' } do %>
-                  <i class="fas fa-times"></i>
-                <% end %>
-              </td>
-            </tr>
-          <% end %>
+          <%= render @records %>
         </tbody>
       </table>
     </div>
@@ -36,6 +24,4 @@
 
 <br>
 
-<%= button_to "New Record", new_record_path, :method => "get", class: "btn btn-primary btn-lg btn-block login-button" %>
-
-
+<%= link_to(t('.new'), new_record_path, class: "btn btn-primary btn-lg btn-block login-button") %>
