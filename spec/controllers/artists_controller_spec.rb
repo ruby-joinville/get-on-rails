@@ -1,21 +1,19 @@
 require 'rails_helper'
 
-RSpec.describe RecordsController, type: :controller do
+RSpec.describe ArtistsController, type: :controller do
   let(:user) { create(:user) }
-  let(:record) { create(:record, user: user) }
+  let(:artist) { create(:artist, user: user) }
   let(:valid_attributes) {
     {
       name: Faker::Movies::HitchhikersGuideToTheGalaxy.character,
-      description: Faker::Movies::HitchhikersGuideToTheGalaxy.quote,
-      value: Random.new.rand(0.0..9.9),
+      profile: Faker::Movies::HitchhikersGuideToTheGalaxy.quote,
       user_id: user.id
     }
   }
   let(:invalid_attributes) {
     {
       name: Faker::Movies::HitchhikersGuideToTheGalaxy.character,
-      description: Faker::Movies::HitchhikersGuideToTheGalaxy.quote,
-      value: Random.new.rand(0.0..9.9),
+      profile: Faker::Movies::HitchhikersGuideToTheGalaxy.quote,
       user_id: nil
     }
   }
@@ -34,7 +32,7 @@ RSpec.describe RecordsController, type: :controller do
 
   describe "GET #show" do
     it "returns a success response" do
-      get :show, params: { id: record.to_param }
+      get :show, params: { id: artist.to_param }
 
       expect(response).to be_successful
     end
@@ -50,7 +48,7 @@ RSpec.describe RecordsController, type: :controller do
 
   describe "GET #edit" do
     it "returns a success response" do
-      get :edit, params: { id: record.to_param }
+      get :edit, params: { id: artist.to_param }
 
       expect(response).to be_successful
     end
@@ -58,22 +56,22 @@ RSpec.describe RecordsController, type: :controller do
 
   describe "POST #create" do
     context "with valid params" do
-      it "creates a new Record" do
+      it "creates a new Artist" do
         expect {
-          post :create, params: { record: valid_attributes }
-        }.to change(Record, :count).by(1)
+          post :create, params: { artist: valid_attributes }
+        }.to change(Artist, :count).by(1)
       end
 
-      it "redirects to the created record" do
-        post :create, params: { record: valid_attributes}
+      it "redirects to the created artist" do
+        post :create, params: { artist: valid_attributes}
 
-        expect(response).to redirect_to(Record.last)
+        expect(response).to redirect_to(Artist.last)
       end
     end
 
     context "with invalid params" do
       it "returns a success response (i.e. to display the 'new' template)" do
-        post :create, params: { record: invalid_attributes }
+        post :create, params: { artist: invalid_attributes }
 
         expect(response.status).to be(302)
       end
@@ -91,24 +89,24 @@ RSpec.describe RecordsController, type: :controller do
         }
       }
 
-      it "updates the requested record" do
-        put :update, params: { id: record.to_param, record: new_attributes }
+      it "updates the requested artist" do
+        put :update, params: { id: artist.to_param, artist: new_attributes }
 
-        record.reload
+        artist.reload
 
-        expect(record.name).to eq(new_attributes[:name])
+        expect(artist.name).to eq(new_attributes[:name])
       end
 
-      it "redirects to the record" do
-        put :update, params: { id: record.to_param, record: new_attributes }
+      it "redirects to the artist" do
+        put :update, params: { id: artist.to_param, artist: new_attributes }
 
-        expect(response).to redirect_to(record)
+        expect(response).to redirect_to(artist)
       end
     end
 
     context "with invalid params" do
       it "returns a success response (i.e. to display the 'edit' template)" do
-        put :update, params: { id: record.to_param, record: invalid_attributes }
+        put :update, params: { id: artist.to_param, artist: invalid_attributes }
 
         expect(response.status).to be(302)
       end
@@ -116,16 +114,16 @@ RSpec.describe RecordsController, type: :controller do
   end
 
   describe "DELETE #destroy" do
-    it "destroys the requested record" do
+    it "destroys the requested artist" do
       expect {
-        delete :destroy, params: { id: record.to_param }
-      }.to change(Record, :count).by(0)
+        delete :destroy, params: { id: artist.to_param }
+      }.to change(Artist, :count).by(0)
     end
 
-    it "redirects to the records list" do
-      delete :destroy, params: { id: record.to_param }
+    it "redirects to the artists list" do
+      delete :destroy, params: { id: artist.to_param }
 
-      expect(response).to redirect_to(records_url)
+      expect(response).to redirect_to(artists_url)
     end
   end
 end

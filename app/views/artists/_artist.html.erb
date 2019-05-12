@@ -1,0 +1,11 @@
+<tr>
+  <td><%= link_to artist.name, artist %></td>
+  <td class="text-center">
+    <%= link_to edit_artist_path(artist) do %>
+      <i class="fas fa-pencil-alt"></i>
+    <% end %>
+    <%= link_to artist, method: :delete, data: { confirm: 'Are you sure?' } do %>
+      <i class="fas fa-times"></i>
+    <% end %>
+  </td>
+</tr>
