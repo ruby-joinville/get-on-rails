@@ -15,14 +15,13 @@ ActiveRecord::Schema.define(version: 2019_05_04_135710) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "records", force: :cascade do |t|
+  create_table "artists", force: :cascade do |t|
     t.string "name"
-    t.text "description"
-    t.float "value"
+    t.text "profile"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "user_id", null: false
-    t.index ["user_id"], name: "index_records_on_user_id"
+    t.index ["user_id"], name: "index_artists_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|

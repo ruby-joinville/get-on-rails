@@ -3,7 +3,7 @@
 <div class="card mb-3">
   <div class="card-header">
     <i class="fas fa-compact-disc"></i>
-    Records
+    Artists
   </div>
   <div class="card-body">
     <div class="table-responsive">
@@ -15,7 +15,7 @@
           </tr>
         </thead>
         <tbody>
-          <%= render @records %>
+          <%= render @artists %>
         </tbody>
       </table>
     </div>
@@ -24,4 +24,4 @@
 
 <br>
 
-<%= link_to(t('.new'), new_record_path, class: "btn btn-primary btn-lg btn-block login-button") %>
+<%= link_to(t('.new'), new_artist_path, class: "btn btn-primary btn-lg btn-block login-button") %>
