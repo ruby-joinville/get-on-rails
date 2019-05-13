@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<div class="card mb-3">
+  <div class="card-header">
+    <i class="fas fa-compact-disc"></i>
+    Records
+  </div>
+  <div class="card-body">
+    <div class="table-responsive">
+      <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <%= render @records %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<br>
+
+<%= link_to(t('.new'), new_record_path, class: "btn btn-primary btn-lg btn-block login-button") %>
