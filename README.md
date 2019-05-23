@@ -8,6 +8,15 @@ This is a template Rails app designed for learning purposes. This template inclu
 
 ### Setup
 
-`bundle install`
 
-`rails db:setup`
+```sh
+cp config/database.sample.yml config/database.yml
+```
+
+```sh
+bundle install
+```
+
+```sh
+rails db:setup
+```
