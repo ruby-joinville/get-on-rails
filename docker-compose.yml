@@ -1,0 +1,7 @@
+version: '3'
+services:
+  db:
+    image: postgres
+    container_name: "postgres_get_on_rails"
+    ports:
+      - "5432:5432"
