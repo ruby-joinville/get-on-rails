@@ -6,8 +6,16 @@ This is a template Rails app designed for learning purposes. This template inclu
  - rails version `5.2.3`
  - Local installation of Postgres with a `postgres:postgres` user:password
 
-### Setup
 
+## Development
+
+### Start DB
+
+```sh
+docker-compose up --build
+```
+
+### Setup
 
 ```sh
 cp config/database.sample.yml config/database.yml
