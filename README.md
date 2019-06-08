@@ -4,7 +4,7 @@ This is a template Rails app designed for learning purposes. This template inclu
 ### Preconditions
  - ruby version `2.5.3`
  - rails version `5.2.3`
- - Local installation of Postgres with a `postgres:postgres` user:password
+ - Local installation of Postgres with a `postgres:root` user:password
 
 
 ## Development
