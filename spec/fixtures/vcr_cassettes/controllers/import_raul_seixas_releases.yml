@@ -1,0 +1,131 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.discogs.com/database/search?f=json&per_page=10&q=Raul%20Seixas&token=cvxyzWiAjGkjVBIgWBwsnsoWVqckMFwyATbuZRGU&type=artist
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip,deflate
+      User-Agent:
+      - Getonrails
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.15.6
+      Date:
+      - Tue, 11 Jun 2019 22:57:28 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      Access-Control-Allow-Headers:
+      - Content-Type, authorization, User-Agent
+      Access-Control-Allow-Methods:
+      - HEAD,OPTIONS,GET,OPTIONS
+      Access-Control-Expose-Headers:
+      - Location
+      X-Discogs-Media-Type:
+      - discogs.v2
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Cache-Control:
+      - public, must-revalidate
+      Content-Encoding:
+      - gzip
+      Strict-Transport-Security:
+      - max-age=16000000
+      X-Discogs-Ratelimit:
+      - '60'
+      X-Discogs-Ratelimit-Used:
+      - '1'
+      X-Discogs-Ratelimit-Remaining:
+      - '59'
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAA82Ya3OiSBSG/4rlh9RM7RL7AjSkytoyGXWS0agxGuPultUCYisXpSGRpOa/b3fAJDObycpOYs0HLWk4fV7efjh98L68oi4LaMzCoHxUui+vnGgihhxxAMHvJXna4eIA5b/luPiZRJ4cvS97lMfiR3kexyt+VKnQFTu0GbdClx9aoV+xaUynlDsV7tDImv8xqy54GBysqxc08X7rO2xD+UEcLp2gat1s0rsrVls0l4vh8al7dXzLAx5eDdfWst24TWuX02R80RwcbDVWITiI05VTpVHMeHwgtVZRWcgLnM2vpuqrkMVix5e2QUMeRQ5PvFge/3lfjueJP31uJPPdb4xkF+2TcXC7TBMwHw2DeaD4waa57BnIqlagBjbiU+G+sKIyY17sRPyIxxFbTZhlffh4NAsjn8YfFivH/Xjkh7YzidypGF8n1GNx+kEFHyv5uinMl4teqSkqAEQ3FIhNCLBOCFSgYeBDOYn4cqXTMYs9CUtZrmcpW085nnABklx8ce6+zIKJFXqeY+WczajHHWlIMLmlQeyJ1RPXPYxKZ3wBlQgXkInRIPE8OWHEZJpKttaVXJrMqjxltcIbEfegX168hfJ7LyefQdc6m7EbrmnuXbcH+GI9TjrN88FttaIDsNGg8RNemv/TSwFEmESWk9/4o/zvn6nMAp57IN3ODWP2k1/ywZAeZBfLix7OZr4Jk3dA7mY4/5yuPl+0Zn3SHKftXjhX2r2aesmETe+EHDIgVglQoIpUBDES+BmagV5hbkgjx/PoHtnbanyAL09fHMKRqqXD1BqmtmbMNrqB2JfhDKjNqMarFWSADSL4rSHcKn/N3aIU5nMWwzAP2o3D/nBcj7srBOON2om+CCjVS4N70xZ0341DFWnEQKL2qdgEQNc1Q8FEBz/m8I7FYale6vBSV1Q0J6J8L2UwlylRlAqUutLhynMFO5bExrDetgkldm8CV4tzeBys2Zzp/ukkL4lY/5nt5eWSuIPHRWnM160YjXnQtzTKKR53t/FfCQCOWToWO6dL97GypiiE2FTyxMpT4h0XVO7ZumNMMcHIgY4zgyaAiBKgExPbFE1N21EJdir5bs9X1HKiQ5fN5N0VtT1TW8z1LOYV089Cnttei2iyCPdhO0EImVB5TK08pf4ljc/0FjM+i/nW+B+1Ss3TRVQPuotup4W7ybrf6bWS0w4fnl6LXeqdegCIATSJqUANa6oowkhTEBY9wNRf/avtbKURC2XJZZZoZPdByFbdQ2ZZah8z7wgIbwcAn1q1Vgf1LxEMTprG/PPsU0z1XtZ9ig70rTf+rehXLC36yOdTFkMvD9qNvavRWaN+uTgxv6wsN2mT4xY4G9Q3xnL4fq88GoKaigR6gKiqCZGpIADJy9t+K2F3pROPJrZA8IL64V62/FyhTK7kyZXH5DsiGFzbXTCYbjS334GDka0x2FhH52dpU80QVAF6awR3cLYogtmUxQjMYnYDsDVMws2cNrWR1g/UIOqfq40prydpKGx6p+KHDUIIxqLxNFRoYgKIeA03jJcJvAgD5pROQks0JXuBb6vuIbHyLPGO4M1rM90e2Y1RWK91ujcdjGrtRnRFmC9fepC+wZC8NXhbza85WpS8fM5i6OVBu7HX8CmYRTd0Pbk8/WT4aYN+ct0oGVwMBu/GnuiDDV2+fGvA0DTxDRVETP1l9i4Fe8E8LB0n9l4a4q24PK+yzbsjeVOTu0tCvd4xjVfT21nSCvHM531Er/NdF785eVvJr/lZlLx8zmLk5UG7kXc1OOHNzZjQ6chZTK67ZtQIr1K0gEg49V5VD2OENfFPI0GAQPH3hCJqIHwZvDa9uwu9vTCHM1nPMu5IWz0mjWX/XA/aCTwbL8E8SUD93L4259vXaQ2+eZ37bw+LwpbdfzHWspivf3/9B9sA12tcGAAA
+    http_version: 
+  recorded_at: Tue, 11 Jun 2019 22:57:28 GMT
+- request:
+    method: get
+    uri: https://api.discogs.com/artists/400768/releases?f=json&per_page=15&token=cvxyzWiAjGkjVBIgWBwsnsoWVqckMFwyATbuZRGU
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip,deflate
+      User-Agent:
+      - Getonrails
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.15.6
+      Date:
+      - Tue, 11 Jun 2019 22:57:29 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      Access-Control-Allow-Headers:
+      - Content-Type, authorization, User-Agent
+      Access-Control-Allow-Methods:
+      - HEAD,OPTIONS,GET,OPTIONS
+      Access-Control-Expose-Headers:
+      - Location
+      Link:
+      - <https://api.discogs.com/artists/400768/releases?per_page=15&token=cvxyzWiAjGkjVBIgWBwsnsoWVqckMFwyATbuZRGU&page=24&f=json>;
+        rel="last", <https://api.discogs.com/artists/400768/releases?per_page=15&token=cvxyzWiAjGkjVBIgWBwsnsoWVqckMFwyATbuZRGU&page=2&f=json>;
+        rel="next"
+      X-Discogs-Media-Type:
+      - discogs.v2
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Cache-Control:
+      - public, must-revalidate
+      Content-Encoding:
+      - gzip
+      Strict-Transport-Security:
+      - max-age=16000000
+      X-Discogs-Ratelimit:
+      - '60'
+      X-Discogs-Ratelimit-Used:
+      - '2'
+      X-Discogs-Ratelimit-Remaining:
+      - '58'
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        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
+    http_version: 
+  recorded_at: Tue, 11 Jun 2019 22:57:30 GMT
+recorded_with: VCR 5.0.0
