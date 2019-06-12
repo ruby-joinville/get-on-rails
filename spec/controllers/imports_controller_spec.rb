@@ -4,9 +4,7 @@ RSpec.describe ImportsController, type: :controller do
   let(:user) { create(:user) }
   let(:import_artist_attributes) { { name: 'Raul Seixas' } }
 
-  before do
-    sign_in(user)
-  end
+  before { sign_in(user) }
 
   describe 'POST artist' do
     before do
