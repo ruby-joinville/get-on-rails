@@ -8,7 +8,7 @@ RSpec.describe ImportsController, type: :controller do
     sign_in(user)
   end
 
-  describe "POST #artist" do
+  describe 'POST artist' do
     before do
       VCR.use_cassette('controllers/import/import_raul_seixas') do
         post :artist, params: { import_artist: import_artist_attributes }
@@ -20,11 +20,11 @@ RSpec.describe ImportsController, type: :controller do
     end
   end
 
-  describe "POST #artist_releases" do
+  describe 'POST artist_releases' do
     let(:artist) { Artist.first }
-    let(:import_artist_releases_attributes) {
+    let(:import_artist_releases_attributes) do
       { artist_id: artist.id, import_artist_releases: { max_results: 15 } }
-    }
+    end
 
     before do
       Artist.new(name: 'Raul Seixas', user: user).save
@@ -38,7 +38,7 @@ RSpec.describe ImportsController, type: :controller do
       expect(Artist.where(name: 'Raul Seixas').first.releases.count).to eq(15)
     end
 
-    it "creates a release called 'Eu Nasci Há 10 Mil Anos Atrás' for Raul Seixas user" do
+    it "creates a release called 'Eu Nasci Há 10 Mil Anos Atrás' for Raul Seixas artist" do
       raul = user.artists.where(name: 'Raul Seixas').first
       wise_raul = raul.releases.where(title: 'Eu Nasci Há 10 Mil Anos Atrás').first
 
