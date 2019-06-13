@@ -27,6 +27,23 @@ class ReleasesController < ApplicationController
     end
   end
 
+  def edit
+    @artist = Artist.find(params[:artist_id])
+    @release = Release.find(params[:id])
+    render :edit
+  end
+
+  def update
+    @artist = Artist.find(params[:artist_id])
+    @release = Release.find(params[:id])
+
+    if @release.update(release_params)
+      redirect_to artist_release_url(artist_id: @artist.id, id: @release.id), notice: 'Release was successfully updated.'
+    else
+      render :edit
+    end
+  end
+
   private
 
   def release_params
