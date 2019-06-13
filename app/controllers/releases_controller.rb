@@ -44,6 +44,15 @@ class ReleasesController < ApplicationController
     end
   end
 
+  def destroy
+    @artist = Artist.find(params[:artist_id])
+    @release = Release.find(params[:id])
+
+    @release.destroy
+
+    redirect_to artist_releases_url, notice: 'Release was successfully destroyed.'
+  end
+
   private
 
   def release_params
