@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<div class="card mb-3">
+  <div class="card-header">
+    <i class="fas fa-compact-disc"></i>
+    Releases
+  </div>
+  <div class="card-body">
+    <div class="table-responsive">
+      <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @releases.each do |release| %>
+            <tr>
+              <td><%= release.title %></td>
+              <td class="text-center">
+                <!-- TODO links -->
+              </td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
