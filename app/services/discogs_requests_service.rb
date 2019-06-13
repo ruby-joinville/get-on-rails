@@ -8,6 +8,11 @@ module DiscogsRequestsService
       client.get_artist(artist_id)
     end
 
+    def search_artist_releases(name, max_results: 10)
+      artist_id = resolve_artist_id(name)
+      client.get_artist_releases(artist_id.to_s, { per_page: max_results})['releases']
+    end
+
     private
 
     def search_artist_by_name(name, results_per_page: 10)
