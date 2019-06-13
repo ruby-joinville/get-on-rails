@@ -111,6 +111,10 @@ GEM
       hashie (~> 3.0)
       httparty (~> 0.14)
       oauth (~> 0.5.1)
+    dotenv (2.7.2)
+    dotenv-rails (2.7.2)
+      dotenv (= 2.7.2)
+      railties (>= 3.2, < 6.1)
     erubi (1.8.0)
     execjs (2.7.0)
     factory_bot (4.8.2)
@@ -306,6 +310,7 @@ DEPENDENCIES
   chromedriver-helper
   devise
   discogs-wrapper
+  dotenv-rails
   factory_bot_rails
   faker
   jbuilder (~> 2.5)
