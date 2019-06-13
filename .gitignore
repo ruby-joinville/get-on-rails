@@ -29,3 +29,6 @@
 
 # Database files
 /config/database.yml
+
+# Ignore local config envs
+.env

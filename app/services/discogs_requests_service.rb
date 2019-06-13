@@ -1,7 +1,4 @@
 module DiscogsRequestsService
-  DISCOGS_TOKEN = 'cvxyzWiAjGkjVBIgWBwsnsoWVqckMFwyATbuZRGU'.freeze
-  APP_NAME = 'Getonrails'.freeze
-
   class Client
     def get_artist(name)
       artist_id = resolve_artist_id(name)
@@ -31,7 +28,7 @@ module DiscogsRequestsService
     end
 
     def client
-      @client ||= Discogs::Wrapper.new(APP_NAME, user_token: DISCOGS_TOKEN)
+      @client ||= Discogs::Wrapper.new(ENV['APP_NAME'], user_token: ENV['DISCOGS_TOKEN'])
     end
   end
 end
