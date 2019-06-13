@@ -3,7 +3,7 @@
 <div class="card mb-3">
   <div class="card-header">
     <i class="fas fa-compact-disc"></i>
-    Releases
+    Releases by <%= link_to "#{@artist.name}", artist_path(@artist) %>
   </div>
   <div class="card-body">
     <div class="table-responsive">
@@ -17,9 +17,14 @@
         <tbody>
           <% @releases.each do |release| %>
             <tr>
-              <td><%= release.title %></td>
+              <td><%= link_to release.title, artist_release_path(artist_id: @artist.id, id: release.id) %></td>
               <td class="text-center">
-                <!-- TODO links -->
+                <%= link_to edit_artist_release_path(artist_id: @artist.id, id: release.id) do %>
+                  <i class="fas fa-pencil-alt"></i>
+                <% end %>
+                <%= link_to artist_release_path(artist_id: @artist.id, id: release.id), method: :delete, data: { confirm: 'Are you sure?' } do %>
+                  <i class="fas fa-times"></i>
+                <% end %>
               </td>
             </tr>
           <% end %>
@@ -28,3 +33,7 @@
     </div>
   </div>
 </div>
+
+<br>
+
+<%= link_to(t('.new'), new_artist_release_path(@artist.id), class: "btn btn-primary btn-lg btn-block login-button") %>

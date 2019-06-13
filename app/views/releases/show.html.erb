@@ -7,6 +7,6 @@
   </div>
   <div class="card-body">
     <p>Year: <%= @release.year %></p>
-    <p>Artist: <%= @artist.name %></p>
+    <p>Artist: <%= link_to @artist.name, artist_path(@artist) %></p>
   </div>
 </div>
