@@ -3,6 +3,8 @@ Rails.application.routes.draw do
 
   devise_for :users
 
+  post 'artists/import', to: 'imports#artist'
+
   resources :artists do
     resources :releases
   end
