@@ -23,7 +23,7 @@ class ReleasesController < ApplicationController
 
         if @release.save
             redirect_to artist_release_url(artist_id: @artist.id, id: @release.id), 
-            notice: 'Creted successfully'
+            notice: 'Created successfully'
         else
             render :new
         end

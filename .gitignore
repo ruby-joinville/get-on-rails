@@ -29,3 +29,6 @@
 
 # Database files
 /config/database.yml
+
+#Environment file
+.env

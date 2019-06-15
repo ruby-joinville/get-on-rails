@@ -34,8 +34,42 @@
   </div>
 </div>
 <div>
+<div class="modal fade" id="importArtistReleasesModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Import Releases</h5>
+        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>
+      <%= form_with(url: import_artist_releases_path, local: true) do |form| %>
+        <div class="modal-body">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-12">
+                <div class="form-group">
+                  <label for="name" class="control-label custom-control-label">Results</label>
+                  <div class="input-group">
+                    <span class="input-group-addon"><i class="fas fa-compact-disc" aria-hidden="true"></i></span>
+                    <input type="text" class="form-control" id="import_artist_releases" name="import_artist_releases[max_results]" value="10">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+          <button type="submit" class="btn btn-primary">Import</button>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
 <%= link_to(t('.new'),
     new_artist_release_path,
     class: "btn btn-dark btn-lg btn-block login-button")
 %>
+<%= link_to('Import', '#', class: "btn btn-dark btn-lg btn-block login-button", 'data-toggle' => "modal", 'data-target'=>"#importArtistReleasesModal" ) %>
 </div>
