@@ -3,7 +3,16 @@ Rails.application.routes.draw do
 
   devise_for :users
 
+  post 'artists/import', to: 'imports#artist'
+
+  #post 'artists/:artist_id/releases/import', to: 'imports#artist_releases'
+
   resources :artists do 
-  	resources :releases
+  	resources :releases do
+  		collection do
+  			post :import, to: 'imports#artist_releases'
+  		end
+  	end
   end
+
 end
