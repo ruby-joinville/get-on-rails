@@ -1,0 +1,65 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.discogs.com/database/search?f=json&per_page=10&q=tegdcjbg4vb4422nann&token=cvxyzWiAjGkjVBIgWBwsnsoWVqckMFwyATbuZRGU&type=artist
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip,deflate
+      User-Agent:
+      - Getonrails
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.15.6
+      Date:
+      - Fri, 07 Jun 2019 00:10:17 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      Access-Control-Allow-Headers:
+      - Content-Type, authorization, User-Agent
+      Access-Control-Allow-Methods:
+      - HEAD,OPTIONS,GET,OPTIONS
+      Access-Control-Expose-Headers:
+      - Location
+      X-Discogs-Media-Type:
+      - discogs.v2
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Cache-Control:
+      - public, must-revalidate
+      Content-Encoding:
+      - gzip
+      Strict-Transport-Security:
+      - max-age=16000000
+      X-Discogs-Ratelimit:
+      - '60'
+      X-Discogs-Ratelimit-Used:
+      - '6'
+      X-Discogs-Ratelimit-Remaining:
+      - '54'
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAA6tWKkhMz8xLLMnMz1OyUqhWKkgtigcKpQI5hgY6CiDp1GIQB8qGMkuLckCi1bVA4cyS1FwQxwDEKUotLs0pAXGjY2sBaEyngV4AAAA=
+    http_version: 
+  recorded_at: Fri, 07 Jun 2019 00:10:17 GMT
+recorded_with: VCR 5.0.0
