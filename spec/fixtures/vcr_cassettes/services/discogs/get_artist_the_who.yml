@@ -1,0 +1,127 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.discogs.com/database/search?f=json&per_page=10&q=The%20Who&token=cvxyzWiAjGkjVBIgWBwsnsoWVqckMFwyATbuZRGU&type=artist
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip,deflate
+      User-Agent:
+      - Getonrails
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.15.6
+      Date:
+      - Fri, 07 Jun 2019 00:10:15 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      Access-Control-Allow-Headers:
+      - Content-Type, authorization, User-Agent
+      Access-Control-Allow-Methods:
+      - HEAD,OPTIONS,GET,OPTIONS
+      Access-Control-Expose-Headers:
+      - Location
+      X-Discogs-Media-Type:
+      - discogs.v2
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Cache-Control:
+      - public, must-revalidate
+      Content-Encoding:
+      - gzip
+      Strict-Transport-Security:
+      - max-age=16000000
+      X-Discogs-Ratelimit:
+      - '60'
+      X-Discogs-Ratelimit-Used:
+      - '4'
+      X-Discogs-Ratelimit-Remaining:
+      - '56'
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAA82Ya2+bShCG/4rlDzmtziGw3IlkVXbt2HGC08S3JkdH1gILXpubWYgvUf/72QXSNlGVGDW2+iEXFmZn9p2H2WEf6zH0cAhTHIX1s9pjPUbJjA4hegGEf2rsNiL5hfB0ya7onSzx2Y3Hug9JSv+pz9M0Jmc8D2N86mBiRx45taOAd2AKLUgQTxBM7Pknt7EgUXiyaozm6O/pPDpJoyUKG/bDZrub4uaiu1xMWhfetLUmIYmmk5W9NM/X2+bIyu5vu+OTpxAbQDhJtzFqwCTFJD1hodIxQajT6EK0+XOCEuvfaEg4RQFTTFQMVWADCSKZn7Khfx/r6TwLrJ9lxIH3TMbtQ3vbb23RbXuCL5qJGq+8pjlTzrtfSIMHirChPzwJqBi8i/0UJeSMpAmOZ9i2P3w8c6MkgOmHRYy8j2dB5KBZ4ll0fJVBH6fbD7LwkS+zxuGAZZ1vcsBQNVXlAJCBosmyoZ8ye/rLYxqnOPUZKHWayBpNJBvLCAWIZZyOP9ZxOLMj30d2yZcLfYKYFOFsDcPUp2mjz+WjTJCAkkTNKVl0NMx8n02YYOaCL5LMlxFRj1zp0Y4eqE0eMnvwicKX8o2n5p0JHelq7IjaTZMsNp553e53J0GnwcuyvFGF35HPqC4fTX+UJTYq1/s98pfvT7FyUi6diVzqhJ0fMrEXgS2/eJg9lN8t5KLa7gHYYHN9N8pudjOyxdKkY96Y94tMcEW3px8MMFHXdU2ngImybsiapp962P0lX90MEXIsysqwGGW534qspUuz9zD6Olgl5uhWHri3d4o9GEEYrShroiptRNn4jVf1l6y9qmRV1IrJqqFW2OyHWs8eOp2xC6Pd9H7+RdESJfzirkdLZe0dDDUABFVXaDFTFCBLiiCpnARU6ZWKFoUOShhyn45S2cr48tKWu65I3SBdty8tVfLwTniQ4s0Wt9Npqze9WDcbPK1uG+n9qdtH1KrwlXNWo6802g+/YWd731l1br72zfV6N7zvS5NschfeNjv24fCTgappHEVPAKquGQKnyar8Cn3zKMEOJEdBr4it3FS/u91zZzWCi2x308ezThKEfk+70wYDBH2Oc0ruREN572pHG5K31KyMXT5lRepym/2gw9ZVy8Qq549lv6n29GwhTazL6fVudbjtFWiaJAGDA5IuqjLQDYnWPB28Sp2Pam2YhLVzGGB/exT8yihL/nzEsQC4HwHsCaJ5qST6RTts+ju0uERZlo7XIjg38MW6wdOmeyMJ+ruDuIfClUks5qyIYmG0H4tgGFor23A4tTObDletttybbcbQmS7NgxVASZcNWv/oHxWIQBc4GWjKqyRGPvZguDsGgkVwJYA/+d2TvGCxMpRBbz7OLifAhaQlRF+7wyvJG9CGj229B/i4eFvPqtzlM1ajLjfZj7n21bK3BqMYLMlk3I+6OFx8vh1c3zsPB6x/tPgZCoVOFAVVpp33r3mjLd5fR/u2AEVM1Cep2ODFQ2EYfO7fLCWvLxHNbnY611nWQ3FIu2YJ0AbPEN+9vr2qYFXCirVXQ6ywec4Ym+Hl6QPdt4xjlApR00RB535sVrnXPQuFDFxNtxRbsKBsWY4r2o7lyKJkacAQkKbaGlI0RdT48giGxNBGCfsoZkurKncRajW5C5u35a5d07M8RE+Y4DFEB6KhArp9lKpzz5z/kdqXEVcTvzR6W30K+2dI5rUuDPOjuIMfu6mGIYvKk/60RWPuuSf3f2YGipgrZqAw+vbft/8BRAuUbRsXAAA=
+    http_version: 
+  recorded_at: Fri, 07 Jun 2019 00:10:15 GMT
+- request:
+    method: get
+    uri: https://api.discogs.com/artists/196766?f=json&token=cvxyzWiAjGkjVBIgWBwsnsoWVqckMFwyATbuZRGU
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip,deflate
+      User-Agent:
+      - Getonrails
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.15.6
+      Date:
+      - Fri, 07 Jun 2019 00:10:16 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      Access-Control-Allow-Headers:
+      - Content-Type, authorization, User-Agent
+      Access-Control-Allow-Methods:
+      - HEAD,OPTIONS,GET,OPTIONS
+      Access-Control-Expose-Headers:
+      - Location
+      X-Discogs-Media-Type:
+      - discogs.v2
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Cache-Control:
+      - public, must-revalidate
+      Content-Encoding:
+      - gzip
+      Strict-Transport-Security:
+      - max-age=16000000
+      X-Discogs-Ratelimit:
+      - '60'
+      X-Discogs-Ratelimit-Used:
+      - '5'
+      X-Discogs-Ratelimit-Remaining:
+      - '55'
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        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
+    http_version: 
+  recorded_at: Fri, 07 Jun 2019 00:10:16 GMT
+recorded_with: VCR 5.0.0
