@@ -5,3 +5,8 @@ services:
     container_name: "postgres_get_on_rails"
     ports:
       - "5432:5432"
+  redis:
+    image: redis
+    container_name: "redis_get_on_rails"
+    ports:
+      - "6379:6379"
