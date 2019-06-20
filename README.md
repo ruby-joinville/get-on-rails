@@ -1,21 +1,18 @@
 # GetOnRails
-This is a template Rails app designed for learning purposes. This template includes the basic to get a Rails student started with a functioning system with postgres, devise and a [basic bootstrap theme](https://startbootstrap.com/templates/sb-admin/).
+Olá! Essa é uma aplicação com finalidade de aprendizado do framework Ruby on Rails. O objetivo é oferecer uma aplicação já funcionando que deve ser modificada de maneira incremental e validada com os testes já implementados. Veja nossa [wiki](https://github.com/ruby-joinville/get-on-rails/wiki) para mais detalhes.
 
-### Preconditions
- - ruby version `2.5.3`
- - rails version `5.2.3`
- - Local installation of Postgres with a `postgres:postgres` user:password
+### Requerimentos para subir a aplicação
+ - ruby na versão `2.5.1`
 
+## Desenvolvimento
 
-## Development
-
-### Start DB
+### Rode o banco de dados
 
 ```sh
 docker-compose up --build
 ```
 
-### Setup
+### Configure e instale as dependências do projeto
 
 ```sh
 cp config/database.sample.yml config/database.yml
