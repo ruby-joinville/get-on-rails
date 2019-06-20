@@ -1,4 +1,5 @@
 require 'rails_helper'
+require 'sidekiq/testing'
 
 RSpec.describe ImportsController, type: :controller do
   let(:user) { create(:user) }
@@ -8,13 +9,12 @@ RSpec.describe ImportsController, type: :controller do
 
   describe 'POST artist' do
     before do
-      VCR.use_cassette('controllers/import/import_raul_seixas') do
-        post :artist, params: { import_artist: import_artist_attributes }
-      end
+      post :artist, params: { import_artist: import_artist_attributes }
     end
 
-    it 'creates an Artist called Raul Seixas' do
-      expect(Artist.where(name: 'Raul Seixas').first.name).to eq('Raul Seixas')
+    it 'enqueues a job to the ImportArtistWorker with the correct args' do
+      expect(ImportArtistWorker.jobs.size).to eq(1)
+      expect(ImportArtistWorker.jobs.first['args']).to eq(["Raul Seixas", user.id])
     end
   end
 
