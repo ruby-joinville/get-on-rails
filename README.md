@@ -2,7 +2,8 @@
 Olá! Essa é uma aplicação com finalidade de aprendizado do framework Ruby on Rails. O objetivo é oferecer uma aplicação já funcionando que deve ser modificada de maneira incremental e validada com os testes já implementados. Veja nossa [wiki](https://github.com/ruby-joinville/get-on-rails/wiki) para mais detalhes.
 
 ### Requerimentos para subir a aplicação
- - ruby na versão `2.5.1`
+ - ruby na versão `2.5.1` (sugerimos usar o [rvm](https://rvm.io/rvm/install))
+ - [docker-compose](https://docs.docker.com/compose/install/) na versão `1.21.2`
 
 ## Desenvolvimento
 
