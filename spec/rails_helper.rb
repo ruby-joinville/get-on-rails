@@ -3,6 +3,7 @@ require 'spec_helper'
 require 'faker'
 require 'vcr'
 require 'webmock/rspec'
+require 'sidekiq/testing'
 
 ENV['RAILS_ENV'] ||= 'test'
 require File.expand_path('../../config/environment', __FILE__)

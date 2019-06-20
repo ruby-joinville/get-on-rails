@@ -14,7 +14,7 @@ RSpec.describe ImportsController, type: :controller do
 
     it 'enqueues a job to the ImportArtistWorker with the correct args' do
       expect(ImportArtistWorker.jobs.size).to eq(1)
-      expect(ImportArtistWorker.jobs.first['args']).to eq(["Raul Seixas", user.id])
+      expect(ImportArtistWorker.jobs.first['args']).to eq(['Raul Seixas', user.id])
     end
   end
 
