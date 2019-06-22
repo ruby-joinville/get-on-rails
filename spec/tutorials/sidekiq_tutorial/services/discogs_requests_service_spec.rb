@@ -6,7 +6,7 @@ RSpec.describe DiscogsRequestsService, type: :service do
   describe '#search_artist_releases' do
     context 'when artist exists' do
       it 'gets an artist releases successfully' do
-        VCR.use_cassette('services/discogs/get_artist_the_who_releases') do
+        VCR.use_cassette('sidekiq_tutorial/services/discogs/get_artist_the_who_releases') do
           response = discogs_client.search_artist_releases('The Who')
 
           expect(response.first.title).to eq("I Can't Explain")
@@ -16,7 +16,7 @@ RSpec.describe DiscogsRequestsService, type: :service do
 
     context 'when artist does not exists' do
       it 'returns an empty hash' do
-        VCR.use_cassette('services/discogs/get_artist_gdjey537bdgfajj1wqe') do
+        VCR.use_cassette('sidekiq_tutorial/services/discogs/get_artist_gdjey537bdgfajj1wqe') do
           response = discogs_client.search_artist_releases('gdjey537bdgfajj1wqe')
 
           expect(response).to eq({})
@@ -28,7 +28,7 @@ RSpec.describe DiscogsRequestsService, type: :service do
   describe '#get_artist' do
     context 'when artist exists' do
       it 'gets an artist successfully' do
-        VCR.use_cassette('services/discogs/get_artist_the_who') do
+        VCR.use_cassette('sidekiq_tutorial/services/discogs/get_artist_the_who') do
           response = discogs_client.get_artist('The Who')
 
           expect(response.name).to eq('The Who')
@@ -38,7 +38,7 @@ RSpec.describe DiscogsRequestsService, type: :service do
 
     context 'when artist does not exists' do
       it 'returns an empty hash' do
-        VCR.use_cassette('services/discogs/get_artist_tegdcjbg4vb4422nann') do
+        VCR.use_cassette('sidekiq_tutorial/services/discogs/get_artist_tegdcjbg4vb4422nann') do
           response = discogs_client.get_artist('tegdcjbg4vb4422nann')
 
           expect(response).to eq({})

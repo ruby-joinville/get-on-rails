@@ -3,7 +3,13 @@ require 'spec_helper'
 require 'faker'
 require 'vcr'
 require 'webmock/rspec'
-require 'sidekiq/testing'
+
+# Rescue the LoadError when sidekiq is not yet installed
+begin
+  require 'sidekiq/testing'
+rescue LoadError
+  puts 'Sidekiq not yet installed'
+end
 
 ENV['RAILS_ENV'] ||= 'test'
 require File.expand_path('../../config/environment', __FILE__)

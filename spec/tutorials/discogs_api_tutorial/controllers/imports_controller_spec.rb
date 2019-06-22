@@ -9,12 +9,13 @@ RSpec.describe ImportsController, type: :controller do
 
   describe 'POST artist' do
     before do
-      post :artist, params: { import_artist: import_artist_attributes }
+      VCR.use_cassette('discogs_api_tutorial/controllers/import/import_raul_seixas') do
+        post :artist, params: { import_artist: import_artist_attributes }
+      end
     end
 
-    it 'enqueues a job to the ImportArtistWorker with the correct args' do
-      expect(ImportArtistWorker.jobs.size).to eq(1)
-      expect(ImportArtistWorker.jobs.first['args']).to eq(['Raul Seixas', user.id])
+    it 'creates an Artist called Raul Seixas' do
+      expect(Artist.where(name: 'Raul Seixas').first.name).to eq('Raul Seixas')
     end
   end
 
@@ -27,7 +28,7 @@ RSpec.describe ImportsController, type: :controller do
     before do
       Artist.new(name: 'Raul Seixas', user: user).save
 
-      VCR.use_cassette('controllers/import/import_raul_seixas_releases') do
+      VCR.use_cassette('discogs_api_tutorial/controllers/import/import_raul_seixas_releases') do
         post :artist_releases, params: import_artist_releases_attributes
       end
     end
