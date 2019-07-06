@@ -1,5 +1,4 @@
 require 'rails_helper'
-require 'sidekiq/testing'
 
 RSpec.describe ImportsController, type: :controller do
   let(:user) { create(:user) }
