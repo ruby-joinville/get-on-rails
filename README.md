@@ -1,5 +1,5 @@
 # GetOnRails
-Olá! Essa é uma aplicação com finalidade de aprendizado do framework Ruby on Rails. O objetivo é oferecer uma aplicação já funcionando que deve ser modificada de maneira incremental e validada com os testes já implementados. Veja nossa [wiki](https://github.com/ruby-joinville/get-on-rails/wiki) para mais detalhes.
+Olá! Esse é um projeto com finalidade de aprendizado do framework Ruby on Rails. O objetivo é oferecer uma aplicação já funcionando que deve ser modificada de maneira incremental através dos tutoriais e validada com os testes já implementados. Veja nossa [wiki](https://github.com/ruby-joinville/get-on-rails/wiki) para mais detalhes.
 
 ### Requerimentos para subir a aplicação
  - ruby na versão `2.5.1` (sugerimos usar o [rvm](https://rvm.io/rvm/install))
@@ -13,7 +13,7 @@ Olá! Essa é uma aplicação com finalidade de aprendizado do framework Ruby on
 docker-compose up --build
 ```
 
-### Configure e instale as dependências do projeto
+### Configure e instale as dependências da aplicação
 
 ```sh
 cp config/database.sample.yml config/database.yml
