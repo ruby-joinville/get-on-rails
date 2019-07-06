@@ -17,9 +17,7 @@ RSpec.describe ReleasesController, type: :controller do
     }
   }
 
-  before do
-    sign_in(user)
-  end
+  before { sign_in(user) }
 
   describe 'GET #index' do
     it 'returns a success response' do
