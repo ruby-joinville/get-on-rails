@@ -6,12 +6,9 @@ class ImportsController < ApplicationController
       return
     end
 
-    client = DiscogsRequestsService::Client.new
-    artist = client.get_artist(import_artist_params[:name])
+    ImportArtistWorker.perform_async(import_artist_params[:name], current_user.id)
 
-    Artist.new(name: artist.name, profile: artist.profile, user: current_user).save
-
-    redirect_to artists_path
+    redirect_to artists_path, notice: 'Your artist will be imported shortly.'
   end
 
   def artist_releases

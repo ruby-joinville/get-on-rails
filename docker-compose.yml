@@ -5,6 +5,9 @@ services:
     container_name: "postgres_get_on_rails"
     ports:
       - "5432:5432"
+    environment:
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRESQL_USERNAME=postgres
   redis:
     image: redis
     container_name: "redis_get_on_rails"

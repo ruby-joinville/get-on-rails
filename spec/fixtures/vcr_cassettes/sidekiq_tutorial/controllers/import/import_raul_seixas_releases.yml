@@ -1,0 +1,159 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.discogs.com/database/search?f=json&per_page=10&q=Raul%20Seixas&token=cvxyzWiAjGkjVBIgWBwsnsoWVqckMFwyATbuZRGU&type=artist
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip,deflate
+      User-Agent:
+      - Getonrails
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 20 Jan 2022 13:08:26 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      X-Discogs-Ratelimit:
+      - '60'
+      X-Discogs-Ratelimit-Remaining:
+      - '60'
+      X-Discogs-Ratelimit-Used:
+      - '0'
+      Access-Control-Allow-Headers:
+      - Content-Type, authorization, User-Agent, Private-Auth-Secret, Discogs-UID
+      Access-Control-Allow-Methods:
+      - HEAD,OPTIONS,GET,OPTIONS
+      Access-Control-Expose-Headers:
+      - Location
+      Content-Language:
+      - en
+      X-Discogs-Media-Type:
+      - discogs.v2
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Cache-Control:
+      - public, must-revalidate
+      Content-Encoding:
+      - gzip
+      Strict-Transport-Security:
+      - max-age=15724800
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Set-Cookie:
+      - __cf_bm=DHQCfsPQ8XLg66XE7jQPqZrrCvAkFm.PnzZgIX.A7YM-1642684106-0-AWzy4bhi+2mupXbe1Nxnl1oRdNlom0HW/yGCwQiuYo1bmoUFDIy8Hmcxjreh1lTOgkmk8nXxdjpsT+bsxO57GPY=;
+        path=/; expires=Thu, 20-Jan-22 13:38:26 GMT; domain=.discogs.com; HttpOnly;
+        Secure; SameSite=None
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 6d08880fbd6a364c-FLN
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        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
+    http_version: 
+  recorded_at: Thu, 20 Jan 2022 13:08:26 GMT
+- request:
+    method: get
+    uri: https://api.discogs.com/artists/400768/releases?f=json&per_page=15&token=cvxyzWiAjGkjVBIgWBwsnsoWVqckMFwyATbuZRGU
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip,deflate
+      User-Agent:
+      - Getonrails
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 20 Jan 2022 13:08:27 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      X-Discogs-Ratelimit:
+      - '60'
+      X-Discogs-Ratelimit-Remaining:
+      - '59'
+      X-Discogs-Ratelimit-Used:
+      - '1'
+      Access-Control-Allow-Headers:
+      - Content-Type, authorization, User-Agent, Private-Auth-Secret, Discogs-UID
+      Access-Control-Allow-Methods:
+      - HEAD,OPTIONS,GET,OPTIONS
+      Access-Control-Expose-Headers:
+      - Location
+      Content-Language:
+      - en
+      Link:
+      - <https://api.discogs.com/artists/400768/releases?f=json&per_page=15&token=cvxyzWiAjGkjVBIgWBwsnsoWVqckMFwyATbuZRGU&page=32>;
+        rel="last", <https://api.discogs.com/artists/400768/releases?f=json&per_page=15&token=cvxyzWiAjGkjVBIgWBwsnsoWVqckMFwyATbuZRGU&page=2>;
+        rel="next"
+      X-Discogs-Media-Type:
+      - discogs.v2
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Cache-Control:
+      - public, must-revalidate
+      Content-Encoding:
+      - gzip
+      Strict-Transport-Security:
+      - max-age=15724800
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Set-Cookie:
+      - __cf_bm=mfQwcxl6v4cQawkEzagXrT0ZG2XVHCkKB.qh2pXTkpU-1642684107-0-ASliYVRbgeOOVTUheieYy2Jz2dMnomHz4x357bev59F3+VMagvIOisyixylq+q/sLeVXo2kRFMcln1oFMHmjmiI=;
+        path=/; expires=Thu, 20-Jan-22 13:38:27 GMT; domain=.discogs.com; HttpOnly;
+        Secure; SameSite=None
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 6d088814da853652-FLN
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        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
+    http_version: 
+  recorded_at: Thu, 20 Jan 2022 13:08:27 GMT
+recorded_with: VCR 5.0.0

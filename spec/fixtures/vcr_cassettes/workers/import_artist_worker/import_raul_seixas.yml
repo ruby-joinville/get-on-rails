@@ -1,0 +1,159 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.discogs.com/database/search?f=json&per_page=10&q=Raul%20Seixas&token=cvxyzWiAjGkjVBIgWBwsnsoWVqckMFwyATbuZRGU&type=artist
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip,deflate
+      User-Agent:
+      - Getonrails
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 20 Jan 2022 12:56:34 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      X-Discogs-Ratelimit:
+      - '60'
+      X-Discogs-Ratelimit-Remaining:
+      - '60'
+      X-Discogs-Ratelimit-Used:
+      - '0'
+      Access-Control-Allow-Headers:
+      - Content-Type, authorization, User-Agent, Private-Auth-Secret, Discogs-UID
+      Access-Control-Allow-Methods:
+      - HEAD,OPTIONS,GET,OPTIONS
+      Access-Control-Expose-Headers:
+      - Location
+      Content-Language:
+      - en
+      Link:
+      - <https://api.discogs.com/database/search?f=json&per_page=10&q=Raul+Seixas&token=cvxyzWiAjGkjVBIgWBwsnsoWVqckMFwyATbuZRGU&type=artist&page=3>;
+        rel="last", <https://api.discogs.com/database/search?f=json&per_page=10&q=Raul+Seixas&token=cvxyzWiAjGkjVBIgWBwsnsoWVqckMFwyATbuZRGU&type=artist&page=2>;
+        rel="next"
+      X-Discogs-Media-Type:
+      - discogs.v2
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Cache-Control:
+      - public, must-revalidate
+      Content-Encoding:
+      - gzip
+      Strict-Transport-Security:
+      - max-age=15724800
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Set-Cookie:
+      - __cf_bm=G5sXPvqpDJmznIgGFYCUktGxcZVKhHyjh_dkuTYhS8Y-1642683394-0-ASggi94tqa3V4lGLaKx4rEuceH9cVmwhGvzo+rhn77qG5PhXX0YRR6m9f4yJBklZ9snXOuVykl61xMlYFnX7D7o=;
+        path=/; expires=Thu, 20-Jan-22 13:26:34 GMT; domain=.discogs.com; HttpOnly;
+        Secure; SameSite=None
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 6d0876ad8e4d3646-FLN
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        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
+    http_version: 
+  recorded_at: Thu, 20 Jan 2022 12:56:34 GMT
+- request:
+    method: get
+    uri: https://api.discogs.com/artists/400768?f=json&token=cvxyzWiAjGkjVBIgWBwsnsoWVqckMFwyATbuZRGU
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip,deflate
+      User-Agent:
+      - Getonrails
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 20 Jan 2022 12:56:35 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      X-Discogs-Ratelimit:
+      - '60'
+      X-Discogs-Ratelimit-Remaining:
+      - '59'
+      X-Discogs-Ratelimit-Used:
+      - '1'
+      Access-Control-Allow-Headers:
+      - Content-Type, authorization, User-Agent, Private-Auth-Secret, Discogs-UID
+      Access-Control-Allow-Methods:
+      - HEAD,OPTIONS,GET,OPTIONS
+      Access-Control-Expose-Headers:
+      - Location
+      Content-Language:
+      - en
+      X-Discogs-Media-Type:
+      - discogs.v2
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Cache-Control:
+      - public, must-revalidate
+      Content-Encoding:
+      - gzip
+      Strict-Transport-Security:
+      - max-age=15724800
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Set-Cookie:
+      - __cf_bm=qEqKfUY6LCRrAtlTTP0_u6_8TsjANLulEF1iWfMDJbo-1642683395-0-AaelpBperaQ0TCG1+5Sd9KY678e7eV49SNH6YvGDN4ETZymN0kQ0D5DCYpfLxqVck3vO2W3rPt/Dc2DwcwmR2vs=;
+        path=/; expires=Thu, 20-Jan-22 13:26:35 GMT; domain=.discogs.com; HttpOnly;
+        Secure; SameSite=None
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 6d0876b24e023646-FLN
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        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
+    http_version: 
+  recorded_at: Thu, 20 Jan 2022 12:56:35 GMT
+recorded_with: VCR 5.0.0
